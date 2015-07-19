@@ -54,7 +54,7 @@ def api_exec(target, fun, arg='', arg_num=0):
     ch.close()
     return html
  
-#测试时用的,做为模块使用时请注释下面两行,作为模块就是不需要每次都写验证代码。以模块形式导入，调用时候就只要最后两行即可，第一行就是调用登录模块 
+#测试时用的,做为模块使用时请注释下面两行,作为模块就是不需要每次都写验证代码。以模块形式导入.
 api_login()
 print api_exec('HD1', 'test.ping', '', 0)
 
