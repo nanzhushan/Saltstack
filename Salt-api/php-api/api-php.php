@@ -1,7 +1,13 @@
 <?php
 /*
-@author knight 
- */
+适合php5.3版本
+在5.4版本中
+$token = explode(" ",$token)[1];  相当于下面两行：
+
+$token = explode(" ",$token);
+$token = $token[1];
+
+*/
 function get_token(){
 global $token;
 $url = 'https://192.168.0.197:8000/login'; //ip是已经配好的api地址如 192.168.0.197
@@ -15,7 +21,11 @@ curl_setopt($ch,CURLOPT_RETURNTRANSFER,TRUE);
 $token = curl_exec($ch);
 $token = strstr($token, 'token', false);  //取登录后返回字符串中的token
 $token = strstr($token, 'user', true);
+//die($token);
+//$token = explode(" ",$token)[1]; php5.4版本支持这个写法,php5.3不支持这个写法
 $token = explode(" ",$token);
+$token = $token[1];
+
 curl_close($ch);
 $token = rtrim($token,"\n"); //删掉token字符串最后面的'\n'，不然后面死活登不上去
 }
