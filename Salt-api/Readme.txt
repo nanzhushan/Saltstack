@@ -1,3 +1,6 @@
+参考：
+http://www.xiaomastack.com/2014/11/18/salt-api/
+
 开始前也需要安装salt的api
 yum install -y salt-api python-cherrypy
 
