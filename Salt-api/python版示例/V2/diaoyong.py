@@ -8,6 +8,7 @@ sapi = saltAPI()
 
 #params = {'client':'local','tgt':'*', 'fun':'cmd.run', 'arg1':'hello'}
 
+#arg1也可以写成arg
 #params = {'client':'local','tgt':'*', 'fun':'cmd.run', 'arg1':'hostname'}
 params = {'client':'local','tgt':'*', 'fun':'cmd.run', 'arg1':'touch /root/cc.txt;touch cc1.txt'}
 
