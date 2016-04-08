@@ -10,7 +10,7 @@ $token = $token[1];
 */
 function get_token(){
 global $token;
-$url = 'https://192.168.0.197:8000/login'; //ip是已经配好的api地址如 192.168.0.197
+$url = 'https://192.168.0.197:8888/login'; //ip是已经配好的api地址如 192.168.0.197
 $ch = curl_init($url);
 curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,2);
@@ -34,7 +34,7 @@ $token = rtrim($token,"\n"); //删掉token字符串最后面的'\n'，不然后�
 function exc_salt($tgt, $fun, $arg, $arg_num){
 global $token;
 global $report;
-$url = 'https://192.168.0.197:8000/';
+$url = 'https://192.168.0.197:8888/';
 $ch = curl_init($url);
 curl_setopt($ch,CURLOPT_POST,TRUE);
 curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,2);

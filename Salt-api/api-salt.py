@@ -9,7 +9,7 @@ import StringIO
 #登录salt-api,获取token
 def api_login():
     global token
-    url='https://192.168.0.197:8000/login'
+    url='https://192.168.0.197:8888/login'
     ch=pycurl.Curl()
     ch.setopt(ch.URL, url)
     info = StringIO.StringIO()
@@ -34,7 +34,7 @@ def api_login():
  
 def api_exec(target, fun, arg='', arg_num=0):
     global token
-    url='https://192.168.0.197:8000/'
+    url='https://192.168.0.197:8888/'
     ch=pycurl.Curl()
     ch.setopt(ch.URL, url)
     info = StringIO.StringIO()

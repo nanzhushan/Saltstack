@@ -24,4 +24,4 @@ python setup.py install
 
 
 ≤‚ ‘”Ôæ‰£∫
-curl -k https://192.168.0.197:8000/login -H "Accept: application/x-yaml" -d username='saltapi' -d password='password' -d eauth='pam'
+curl -k https://192.168.0.197:8888/login -H "Accept: application/x-yaml" -d username='saltapi' -d password='password' -d eauth='pam'
